@@ -2,9 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors")
 app.use(cors(
-
       {
-        origin: ["https://orsod-alex.vercel.app"],
+        origin: ["https://orsod.vercel.app"],
         methods: ["POST","GET"],
         credentials: true
   }
