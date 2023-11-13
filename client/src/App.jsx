@@ -31,7 +31,7 @@ function App() {
 
   const [image, setImage] = useState("");
   const [showModal, setShowModal] = useState(false);
-  axios.defaults.withCredentials = true;
+  Axios.defaults.withCredentials = true;
   useEffect(() => {
     getLocation(function (err, position) {
       if (err) {
