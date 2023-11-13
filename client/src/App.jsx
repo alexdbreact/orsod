@@ -57,7 +57,7 @@ function App() {
         mob,
         flag,
       }).then((res) => res.data);
-      location.reload();
+      
 
     } 
   };
