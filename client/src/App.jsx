@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { getLocation } from "current-location-geo";
 import Axios from "axios";
-const api = "http://localhost:3001";
+const api = "orsod-alex.vercel.app";
 import Navbar from "./navbar";
 import {
   TERipple,
