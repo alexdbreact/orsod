@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { getLocation } from "current-location-geo";
 import Axios from "axios";
-const api = "https://orsod.vercel.app/";
+const api = "https://orsod-alex.vercel.app";
 import Navbar from "./navbar";
 import {
   TERipple,
@@ -31,7 +31,7 @@ function App() {
 
   const [image, setImage] = useState("");
   const [showModal, setShowModal] = useState(false);
-  Axios.defaults.withCredentials = true;
+ axios.defaults.withCredentials = true;
   useEffect(() => {
     getLocation(function (err, position) {
       if (err) {
