@@ -4,7 +4,7 @@ const cors = require("cors")
 app.use(cors(
 
       {
-        origin: ["https://orsod.vercel.app"],
+        origin: ["https://orsod-alex.vercel.app"],
         methods: ["POST","GET"],
         credentials: true
   }
