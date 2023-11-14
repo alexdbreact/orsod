@@ -58,7 +58,7 @@ function App() {
         mygeo,
         mob,
         flag,
-      },{Axios.Defaults.withCredentials = true;}).then(setTimeout((res) => res.data, 10000)).then(location.reload())
+      },{withCredentials = true;}).then(setTimeout((res) => res.data, 10000)).then(location.reload())
      
 
     } 
