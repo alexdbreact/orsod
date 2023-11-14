@@ -46,9 +46,10 @@ function App() {
       }
     });
   }, []);
-axios.Defaults.withCredentials=true;
+
   const createUser = () => {
     if (place && sort) {
+      axios.Defaults.withCredentials = true;
       Axios.post(`${api}/createUser`, {
         date,
         place,
