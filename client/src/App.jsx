@@ -28,8 +28,10 @@ function App() {
   const [mob, setMob] = useState("");
 
   const [flag, setFlag] = useState("");
-
+  
   const [image, setImage] = useState("");
+    Axios.defaults.withCredentials=true
+
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     getLocation(function (err, position) {
