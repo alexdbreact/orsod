@@ -1,6 +1,9 @@
 const {Schema , model} = require("mongoose");
 
 const UserSchema = new Schema({
+     date :{
+        type: String,
+    },
     place :{
         type: String,
     },
