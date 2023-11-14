@@ -43,7 +43,7 @@ function App() {
       }
     });
   }, []);
-  Axios.defaults.withCredentials=true;
+  axios.defaults.withCredentials=true;
 
   const createUser = () => {
     if (place && sort) {
