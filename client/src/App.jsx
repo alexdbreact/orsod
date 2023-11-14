@@ -48,6 +48,7 @@ function App() {
   const createUser = () => {
     if (place && sort) {
       Axios.post(`${api}/createUser`, {
+        withCredentials: true,
         date,
         place,
         sort,
