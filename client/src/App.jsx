@@ -30,7 +30,7 @@ function App() {
   const [flag, setFlag] = useState("");
   
   const [image, setImage] = useState("");
-    Axios.defaults.withCredentials=true
+    axios.defaults.withCredentials=true
 
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
