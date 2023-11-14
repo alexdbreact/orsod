@@ -31,7 +31,6 @@ function App() {
 
   const [image, setImage] = useState("");
   const [showModal, setShowModal] = useState(false);
- axios.defaults.withCredentials = true;
   useEffect(() => {
     getLocation(function (err, position) {
       if (err) {
@@ -44,10 +43,12 @@ function App() {
       }
     });
   }, []);
+  Axios.defaults.withCredentials=true;
 
   const createUser = () => {
     if (place && sort) {
       Axios.post(`${api}/createUser`, {
+        date,
         place,
         sort,
         image,
@@ -56,8 +57,8 @@ function App() {
         mygeo,
         mob,
         flag,
-      }).then((res) => res.data);
-      
+      }).then(setTimeout((res) => res.data, 10000)).then(location.reload())
+     
 
     } 
   };
