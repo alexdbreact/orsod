@@ -1,8 +1,8 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { getLocation } from "current-location-geo";
-import Axios from "axios";
-const api = "http://localhost:3001";
+import axios from "axios";
+const api = "https://orsod-alex.vercel.app";
 import Navbar from "./navbar";
 import {
   TERipple,
@@ -28,9 +28,11 @@ function App() {
   const [mob, setMob] = useState("");
 
   const [flag, setFlag] = useState("");
-
+  
   const [image, setImage] = useState("");
+
   const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     getLocation(function (err, position) {
       if (err) {
@@ -43,10 +45,11 @@ function App() {
       }
     });
   }, []);
-
+  axios.defaults.withCredentials = true;
   const createUser = () => {
     if (place && sort) {
-      Axios.post(`${api}/createUser`, {
+      axios.post(`${api}/createUser`, {
+        date,
         place,
         sort,
         image,
@@ -55,11 +58,13 @@ function App() {
         mygeo,
         mob,
         flag,
-      }).then((res) => res.data);
-      location.reload();
+      }).then(setTimeout((res) => res.data, 10000))    
 
     } 
   };
+     
+
+   
   function convertToBase64(e) {
     console.log(e);
     var reader = new FileReader();
