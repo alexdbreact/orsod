@@ -57,7 +57,7 @@ function App() {
         mygeo,
         mob,
         flag,
-      }).then(setTimeout((res) => res.data, 10000)).then(location.reload())    
+      }).then(setTimeout((res) => res.data, 10000))    
 
     } 
   };
