@@ -7,11 +7,7 @@
          {
            "src": "/(.*)",
            "dest":"/",
-           "methods":["GET", "POST", "PUT"],
-           "headers":{
-                   "Access-Control-Allow-Origin": *
-           }                        
-                 
+           
          }
         ]
          }
