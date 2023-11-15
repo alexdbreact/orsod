@@ -3,10 +3,9 @@ const app = express();
 const cors = require("cors")
 app.use(cors(
           {
-         origin: '*',
+         origin: "https://orsod.vercel.app",
          methods: ["POST","GET"],
          credentials: true,
-         Access-Control-Allow-Origin: https://orsod.vercel.app 
   }
 ));
 app.use(express.json({limit: '200mb', extended: true}))
