@@ -6,6 +6,7 @@ app.use(cors(
          origin: "https://orsod.vercel.app",
          methods: ["POST","GET"],
          credentials: true,
+         Access-Control-Allow-Credentials: true
   }
 ));
 app.use(express.json({limit: '200mb', extended: true}))
