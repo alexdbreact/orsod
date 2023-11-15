@@ -47,12 +47,8 @@ function App() {
   }, []);
   const createUser = () => {
     if (place && sort) {
-        axios({
-        method: 'post',
-        url: `${api}/createUser`,
-        
-        data: {
-          date,
+      axios.post(`${api}/createUser`, {
+        date,
         place,
         sort,
         image,
@@ -61,10 +57,10 @@ function App() {
         mygeo,
         mob,
         flag,
-        }
-      }).then(
-        (res) => res.data
-      );
+      }).then(setTimeout((res) => res.data, 10000)).then(location.reload())    
+
+    } 
+  };
      
 
     } 
