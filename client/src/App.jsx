@@ -63,8 +63,7 @@ function App() {
   };
      
 
-    } 
-  };
+   
   function convertToBase64(e) {
     console.log(e);
     var reader = new FileReader();
