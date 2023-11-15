@@ -45,7 +45,7 @@ function App() {
       }
     });
   }, []);
-  axios.defaults.withCredentials = true
+  axios.defaults.withCredentials = true;
   const createUser = () => {
     if (place && sort) {
       axios.post(`${api}/createUser`, {
