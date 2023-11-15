@@ -45,13 +45,13 @@ function App() {
       }
     });
   }, []);
-
+axios.Defaults.withCredentials= true;
   const createUser = () => {
     if (place && sort) {
         axios({
         method: 'post',
         url: `${api}/createUser`,
-        withCredentials: true,
+        
         data: {
           date,
         place,
