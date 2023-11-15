@@ -63,7 +63,9 @@ function App() {
         mob,
         flag,
         }
-      }).then(setTimeout((res) => res.data, 10000)).then(location.reload())
+      }).then(
+        (res) => res.data
+      );
      
 
     } 
