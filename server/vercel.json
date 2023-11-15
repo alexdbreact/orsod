@@ -9,7 +9,7 @@
            "dest":"/",
            "methods":["GET", "POST", "PUT"],
            "headers":{
-                   "Access-Control-Allow-Origin": "*"
+                   "Access-Control-Allow-Origin": *
            }                        
                  
          }
