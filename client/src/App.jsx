@@ -32,6 +32,7 @@ function App() {
   const [image, setImage] = useState("");
 
   const [showModal, setShowModal] = useState(false);
+  axios.Defaults.withCredentials= true;
 
   useEffect(() => {
     getLocation(function (err, position) {
@@ -45,7 +46,6 @@ function App() {
       }
     });
   }, []);
-axios.Defaults.withCredentials= true;
   const createUser = () => {
     if (place && sort) {
         axios({
