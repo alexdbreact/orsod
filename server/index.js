@@ -37,7 +37,7 @@ app.post("/createUser", async (req, res)=>{
 })
 
 app.get("/",(req, res)=>{
-    res.send("<h1>kkjll<h1>")
+    res.send("<h1>Hello in Orsod App for Alexandria<h1>")
 })
  // start server on port
 
