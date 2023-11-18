@@ -6,7 +6,6 @@ app.use(cors(
 {
     origin: *,
     methods: ["GET","POST"],
-      credentials: true,
   }
 ));
 app.use(express.json({limit: '200mb', extended: true}))
