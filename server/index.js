@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
 const cors = require("cors")
+
 app.use(cors(
 
 ));
 app.use(express.json({limit: '200mb', extended: true}))
+app.use(express.urlencoded({limit: '200mb', extended: true}))
+
 const _Port = "3001"
 
 
@@ -15,7 +18,12 @@ const username = "alexdbreact",
       database = "Alexandria";
 
 const mongoose = require("mongoose")
-mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.oiijcet.mongodb.net/${database}?retryWrites=true&w=majority`); 
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.oiijcet.mongodb.net/${database}?retryWrites=true&w=majority`,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 5000
+}
+      ).catch(err => console.log(err.reason)); 
 
 
 // IMPORT USER MODEL
