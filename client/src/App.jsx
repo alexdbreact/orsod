@@ -58,7 +58,7 @@ function App() {
         mygeo,
         mob,
         flag,
-      }).then((res) => res.data).then(location.reload())   
+      }).then((res) => res.data)   
 
     } 
   };
