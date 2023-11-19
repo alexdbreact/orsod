@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { getLocation } from "current-location-geo";
 import Axios from "axios";
-const api = "https://orsod-alex.vercel.app/";
+const api = "https://orsod-alex.vercel.app";
 import Navbar from "./navbar";
 import {
   TERipple,
@@ -45,6 +45,7 @@ function App() {
       }
     });
   }, []);
+  Axios.defaults.withCredentials = true;
   const createUser = () => {
     if (place && sort) {
       Axios.post(`${api}/createUser`, {
