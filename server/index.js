@@ -9,6 +9,12 @@ app.use(cors(
     methods: ["GET","POST"],
   }
 ));
+app.use((req,res,next)=>{
+    res.setHeader('Access-Control-Allow-Origin','*');
+    res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+    res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
+    next(); 
+})
 app.use(express.json({limit: '200mb', extended: true}))
 app.use(express.urlencoded({limit: '200mb', extended: true}))
 
