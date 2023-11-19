@@ -60,7 +60,7 @@ function App() {
         flag,
       }).then((res) => res.data).then(setTimeout(function(){
     location.reload();
-}, 5000);)   
+}, 5000))   
 
     } 
   };
