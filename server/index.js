@@ -3,7 +3,10 @@ const app = express();
 const cors = require("cors")
 
 app.use(cors(
-
+{
+    origin: "https://orsod.vercel.app", // restrict calls to those this address
+    methods: ["GET","POST"] 
+  }
 ));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "https://orsod.vercel.app"); // update to match the domain you will make the request from
