@@ -4,7 +4,7 @@ const cors = require("cors")
 
 app.use(cors(
 {
-    Access-Control-Allow-Origin: '*',
+    Access-Control-Allow-Origin: "https://orsod.vercel.app",
     origin: ["https://orsod.vercel.app", "https://localhost:5173"],
     methods: ["GET","POST"],
   }
