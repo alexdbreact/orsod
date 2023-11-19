@@ -60,6 +60,7 @@ function App() {
         flag,
       }).then((res) => res.data).then(setTimeout(function(){
     location.reload();
+        alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
 }, 5000))   
 
     } 
