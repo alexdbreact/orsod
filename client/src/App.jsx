@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { getLocation } from "current-location-geo";
-import axios from "axios";
+import Axios from "axios";
 const api = "https://orsod-alex.vercel.app";
 import Navbar from "./navbar";
 import {
@@ -45,10 +45,9 @@ function App() {
       }
     });
   }, []);
-  axios.defaults.withCredentials = true;
   const createUser = () => {
     if (place && sort) {
-      axios.post(`${api}/createUser`, {
+      Axios.post(`${api}/createUser`, {
         date,
         place,
         sort,
@@ -58,7 +57,7 @@ function App() {
         mygeo,
         mob,
         flag,
-      }).then((res) => res.data).then(location.reload())   
+      }).then((res) => res.data)   
 
     } 
   };
