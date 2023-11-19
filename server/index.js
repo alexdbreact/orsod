@@ -28,10 +28,7 @@ const username = "alexdbreact",
       database = "Alexandria";
 
 const mongoose = require("mongoose")
-mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.oiijcet.mongodb.net/${database}?retryWrites=true&w=majority`,{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}
+mongoose.connect(`mongodb+srv://${username}:orsod@cluster0.oiijcet.mongodb.net/${database}?retryWrites=true&w=majority`
       ).catch(err => console.log(err.reason)); 
 
 
