@@ -4,7 +4,7 @@ const cors = require("cors")
 
 app.use(cors(
 {
-    origin: "https://orsod.vercel.app", // restrict calls to those this address
+   origin: ["https://orsod.vercel.app","http://localhost:5173"], // restrict calls to those this address
     methods: ["GET","POST"] ,
     credentials: true,
   }
