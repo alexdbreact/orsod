@@ -61,7 +61,7 @@ function App() {
       }).then((res) => res.data).then(setTimeout(function(){
     location.reload();
         alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
-}, 3000))   
+}, 5000))   
 
     } 
   };
