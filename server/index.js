@@ -4,13 +4,13 @@ const cors = require("cors")
 
 app.use(cors(
 {
-   origin: ["https://orsod.vercel.app","http://localhost:5173"], // restrict calls to those this address
+   origin: "https://orsod.vercel.app", // restrict calls to those this address
     methods: ["GET","POST"] ,
     credentials: true,
   }
 ));
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", ["https://orsod.vercel.app","http://localhost:5173"]); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "https://orsod.vercel.app"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
