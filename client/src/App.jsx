@@ -46,25 +46,37 @@ function App() {
     });
   }, []);
   Axios.defaults.withCredentials = true;
-  const createUser = () => {
-    if (place && sort) {
-      Axios.post(`${api}/createUser`, {
-        date,
-        place,
-        sort,
-        image,
-        mylang,
-        mylat,
-        mygeo,
-        mob,
-        flag,
-      }).then((res) => res.data).then(setTimeout(function(){
-    location.reload();
-        alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
-}, 5000))   
+ const createUser = async () => {
+    try {
+        if (place && sort) {
+            const res = await Axios.post(`${api}/createUser`, {
+                date,
+                place,
+                sort,
+                image,
+                mylang,
+                mylat,
+                mygeo,
+                mob,
+                flag,
+            }).then((res) => res.data)
+            .then(setTimeout(function(){
+              location.reload();
+                  alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
+          }, 3000))   
+                           
+        } else {
+          alert("لم يتم الارسال .. برجاء التأكد من ادخالك البيانات المطلوبة و فتح خدمات الموقع )(Location")
+          location.reload(); 
+        }
+    } catch (error) {
+        
+        // Handle errors from the server, e.g., show an error message to the user
+        alert("لم يتم الارسال .. برجاء التأكد من وجودك في مكان المخالفة و فتح خدمات الموقع ") 
+        
+    }
+};
 
-    } 
-  };
      
 
    
