@@ -73,10 +73,10 @@ function App() {
                 mob,
                 flag,
             }).then((res) => res.data)
-            .then(function(){
+            .then(setTimeout(function(){
               location.reload();
                   alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
-          })   
+          }, 3000))   
                            
         } else {
           alert("لم يتم الارسال .. برجاء التأكد من ادخالك البيانات المطلوبة و فتح خدمات الموقع )(Location")
@@ -89,6 +89,7 @@ function App() {
         
     }
 };
+  
 
      
 
