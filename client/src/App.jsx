@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { getLocation } from "current-location-geo";
 import Axios from "axios";
 const api = "https://orsod-alex.vercel.app";
@@ -33,8 +33,8 @@ function App() {
 
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    getLocation(function (err, position) {
+ const memoizedLocation = useMemo(() => {
+    const getLocationCallback = (err, position) => {
       if (err) {
         console.error("Error:", err);
       } else {
@@ -43,13 +43,26 @@ function App() {
         setMylang(position.longitude);
         setDate(Date());
       }
-    });
+    };
+
+    // Assuming getLocation is an asynchronous function
+    getLocation(getLocationCallback);
+
+    return 
+      mygeo ,
+      mylang,
+      mylat ,
+      date 
+
+
+    // Return a value if needed (this can be null if you don't need a memoized value)
   }, []);
   Axios.defaults.withCredentials = true;
  const createUser = async () => {
     try {
         if (place && sort) {
             const res = await Axios.post(`${api}/createUser`, {
+              memoizedLocation,
                 date,
                 place,
                 sort,
