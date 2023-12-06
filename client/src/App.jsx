@@ -63,7 +63,7 @@ function App() {
             .then(setTimeout(function(){
               location.reload();
                   alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
-          }, 3000))   
+          }, 5000))   
                            
         } else {
           alert("لم يتم الارسال .. برجاء التأكد من ادخالك البيانات المطلوبة و فتح خدمات الموقع )(Location")
