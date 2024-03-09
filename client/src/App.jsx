@@ -49,6 +49,13 @@ function App() {
  const createUser = async () => {
     try {
         if (place && sort) {
+          const config = {
+                onUploadProgress: progressEvent => {
+                    const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                    // Update progress UI with percentCompleted
+                    console.log(`Upload Progress: ${percentCompleted}%`);
+                }
+            };
             const res = await Axios.post(`${api}/createUser`, {
                 date,
                 place,
