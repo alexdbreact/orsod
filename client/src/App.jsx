@@ -71,7 +71,7 @@ function App() {
             setTimeout(function(){
                 location.reload();
                 alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
-            }, 5000);
+            }, 1000);
         } else {
             alert("لم يتم الارسال .. برجاء التأكد من ادخالك البيانات المطلوبة و فتح خدمات الموقع )(Location)");
             location.reload(); 
