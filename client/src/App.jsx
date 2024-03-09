@@ -59,21 +59,18 @@ function App() {
                 mygeo,
                 mob,
                 flag,
-            }).then((res) => res.data)
-            .then(setTimeout(function(){
-              location.reload();
-                  alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
-          }, 5000))   
-                           
+            }).then((res) => res.data);
+            
+            setTimeout(function(){
+                location.reload();
+                alert("تم ارسال المخالفة بنجاح .. شكراً لسيادتكم");
+            }, 5000);
         } else {
-          alert("لم يتم الارسال .. برجاء التأكد من ادخالك البيانات المطلوبة و فتح خدمات الموقع )(Location")
-          location.reload(); 
+            alert("لم يتم الارسال .. برجاء التأكد من ادخالك البيانات المطلوبة و فتح خدمات الموقع )(Location)");
+            location.reload(); 
         }
     } catch (error) {
-        
-        // Handle errors from the server, e.g., show an error message to the user
-        alert("لم يتم الارسال .. برجاء التأكد من وجودك في مكان المخالفة و فتح خدمات الموقع ") 
-        
+        alert("لم يتم الارسال .. برجاء التأكد من وجودك في مكان المخالفة و فتح خدمات الموقع ");
     }
 };
 
