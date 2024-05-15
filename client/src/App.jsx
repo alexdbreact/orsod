@@ -303,6 +303,12 @@ function App() {
             </div>
           </div>
         </form>
+              <div className="mt-16 flex justify-center rounded-lg">
+  <a href="https://discoveralexnew.web.app/home.html" className="text-primary ps-1 transition duration-150 ease-in-out hover:text-primary flex items-center bg-blue-200 p-2 rounded-lg">
+    <img src={logoz} className="h-10 w-10 mr-2" alt="Home" />
+    الرجوع لصفحة التطبيق الرئيسية
+  </a>
+</div>
       </div>
     </>
   );
