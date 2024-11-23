@@ -154,13 +154,15 @@ function App() {
                 }}
                 className="bg-gray-50 border font-bold  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center">
                 <option > اختار نوع المخالفة *   </option>
-                 <option>  اعلان مخالف/بدون ترخيص </option>
+                 <option>   </option>
                 <option>نظافة / تراكم قمامة </option>
-                <option >هدم / ترميم / بناء مخالف</option>
+                <option >هدم/ترميم/بناء ( بدون ترخيص )</option>
                 <option >كلاب ضالة / مفترسة</option>
+                <option >موقف عشوائي / زياده اجره</option>
+                <option >انهيار عقار / جزء</option>                
                 <option >إنارة / كهرباء</option>
                 <option >باعة جائلين / إشغال طريق</option>
-                <option >تراكم مياه / كسر ماسورة</option>
+                <option >صرف صحي/تراكم مياه امطار /شنيشه/مطبق/مسدود</option>
                 <option >ازعاج / مكروفوانات</option>
               </select>
             </div>
@@ -227,7 +229,7 @@ function App() {
               <TERipple rippleColor="white">
                 <button
                   type="button"
-                  className="inline-block mx-8 mb-4 rounded bg-primary px-10 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  className="inline-block mx-8 mb-4 rounded bg-primary px-16 pb-4 pt-2.5 text-xl font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                   onClick={() => setShowModal(true)}>
                   تأكيد البيانات و الإرسال
                 </button>
